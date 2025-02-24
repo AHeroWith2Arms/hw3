@@ -1,28 +1,38 @@
 public class Main {
     public static void main(String[] args) {
-        int os = 1;
-        int year = 2015;
+        //1 задача
+        int clientOS = 0;
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке.");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке.");
+        }
+        //2 задача
+        int ClientOS = 1;
+        int clientDeviceYear = 2015;
+        String message;
 
-        if (year < 2015) {
-            if (os == 0) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else if (os == 1) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        if (ClientOS == 0) {
+            message = "Установите версию приложения для iOS по ссылке.";
+            if (clientDeviceYear < 2015) {
+                message = "Установите облегченную версию приложения для iOS по ссылке.";
             }
         } else {
-            if (os == 0) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            } else if (os == 1) {
-                System.out.println("Установите версию приложения для Android по ссылке");
+            message = "Установите версию приложения для Android по ссылке.";
+            if (clientDeviceYear < 2015) {
+                message = "Установите облегченную версию приложения для Android по ссылке.";
             }
         }
-        int Yeard = 2021;
+        System.out.println(message);
+        //3 задача
+        int Year = 2021;
 
-        if ((Yeard % 4 == 0 && Yeard % 100 != 0) || (Yeard % 400 == 0)) {
-            System.out.println(Yeard + " год является високосным");
+        if ((Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0)) {
+            System.out.println(Year + " год является високосным");
         } else {
-            System.out.println(Yeard + " год не является високосным");
+            System.out.println(Year + " год не является високосным");
         }
+        //4 задача
         int dist = 95;
         int days = 1;
 
@@ -33,38 +43,38 @@ public class Main {
         }
 
         System.out.println("Потребуется дней: " + days);
-        int month = 12;
-        String seas = "";
+        //5 задача
+        int monthNumber = 12;
+        String season = "";
 
-        switch (month) {
+        switch (monthNumber) {
             case 1:
             case 2:
-                seas = "зима";
+                season = "зима";
                 break;
             case 3:
             case 4:
             case 5:
-                seas = "весна";
+                season = "весна";
                 break;
             case 6:
             case 7:
             case 8:
-                seas = "лето";
+                season = "лето";
                 break;
             case 9:
             case 10:
             case 11:
-                seas = "осень";
+                season = "осень";
                 break;
             case 12:
-                seas = "зима";
+                season = "зима";
                 break;
             default:
                 System.out.println("Ошибка: Недопустимый месяц");
                 break;
         }
 
-        System.out.println("Месяц " + month + " принадлежит к сезону " + seas);
-
+        System.out.println("Месяц " + monthNumber + " принадлежит к сезону " + season);
     }
 }
