@@ -12,17 +12,16 @@ public class Main {
         int clientDeviceYear = 2015;
         String message;
 
-        if (ClientOS == 0) {
+        if (ClientOS == 0 && clientDeviceYear >= 2015) {
             message = "Установите версию приложения для iOS по ссылке.";
-            if (clientDeviceYear < 2015) {
-                message = "Установите облегченную версию приложения для iOS по ссылке.";
-            }
-        } else {
+        } else if (ClientOS == 0 && clientDeviceYear < 2015) {
+            message = "Установите облегченную версию приложения для iOS по ссылке.";
+        } else if (ClientOS != 0 && clientDeviceYear >= 2015) {
             message = "Установите версию приложения для Android по ссылке.";
-            if (clientDeviceYear < 2015) {
-                message = "Установите облегченную версию приложения для Android по ссылке.";
-            }
+        } else {
+            message = "Установите облегченную версию приложения для Android по ссылке.";
         }
+
         System.out.println(message);
         //3 задача
         int Year = 2021;
