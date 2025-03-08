@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         // Задача 1
         for (int number1To10 = 1; number1To10 <= 10; number1To10++) {
         System.out.println(number1To10);
