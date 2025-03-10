@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        //1
+        //1 я случайно закомитил решение но если расркыть код оно будет видно
         int savings = 0;
         int target = 2459000;
         int monthlyDeposit = 15000;
